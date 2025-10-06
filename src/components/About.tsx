@@ -78,28 +78,29 @@ export default function About() {
             >
               <div className="space-y-6">
                 <p className="text-body text-foreground">
-                  I'm a Senior Fullstack Developer with 5+ years of experience
-                  delivering high-performing web applications for remote-first
-                  startups and SaaS companies. My journey began with a curiosity
-                  about how websites work, and it has evolved into a deep
-                  passion for creating scalable, efficient digital solutions.
+                  I&apos;m a Senior Fullstack Developer with 5+ years of
+                  experience delivering high-performing web applications for
+                  remote-first startups and SaaS companies. My journey began
+                  with a curiosity about how websites work, and it has evolved
+                  into a deep passion for creating scalable, efficient digital
+                  solutions.
                 </p>
 
                 <p className="text-body text-foreground">
                   I specialize in React, Next.js, Node.js, TypeScript, and
-                  modern web technologies. I'm adept at scalable product
+                  modern web technologies. I&apos;m adept at scalable product
                   development, API integration, and performance optimization. I
                   have a proven track record of shipping features fast,
                   improving system efficiency, and collaborating across teams.
                 </p>
 
                 <p className="text-body text-foreground">
-                  I'm actively seeking a full-time remote position with a
+                  I&apos;m actively seeking a full-time remote position with a
                   product-led, growth-focused team where I can continue to
                   deliver exceptional results and contribute to meaningful
-                  projects. When I'm not coding, you'll find me exploring new
-                  technologies, contributing to open-source projects, or sharing
-                  knowledge with the developer community.
+                  projects. When I&apos;m not coding, you&apos;ll find me
+                  exploring new technologies, contributing to open-source
+                  projects, or sharing knowledge with the developer community.
                 </p>
               </div>
 
