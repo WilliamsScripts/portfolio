@@ -7,69 +7,67 @@ import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Token Metrics 3.0",
+    title: "Token Metrics Analytics Platform",
     description:
-      "Rebuilt entire research blog platform from WordPress to Next.js and Strapi CMS, enhancing performance, scalability, and developer experience. Built AI chatbot leveraging OpenAI SDK.",
+      "Rebuilt entire research blog platform from WordPress to Next.js and Supabase, enhancing performance, scalability, and developer experience. Built AI chatbot leveraging OpenAI SDK.",
     image: "/api/placeholder/600/400",
     technologies: [
       "Next.js",
-      "Strapi CMS",
+      "Supabase",
       "PostgreSQL",
       "OpenAI SDK",
       "React",
       "TypeScript",
     ],
-    liveUrl: "https://tokenmetrics.com",
-    githubUrl: "https://github.com/williamscherechi/tokenmetrics",
+    liveUrl: "https://app.tokenmetrics.com",
     featured: true,
   },
   {
     title: "Fuelsgate Platform",
     description:
-      "Designed and implemented entire software architecture for fuel management application. Applied Atomic Design and SOLID principles with comprehensive unit testing.",
+      "Designed and implemented entire software architecture for bulk fuel procurement application.",
     image: "/api/placeholder/600/400",
     technologies: [
       "React",
       "Node.js",
-      "Express.js",
-      "PostgreSQL",
+      "Nest.js",
+      "MongoDB",
+      "AWS",
       "GitHub Actions",
       "Vercel",
     ],
     liveUrl: "https://fuelsgate.com",
-    githubUrl: "https://github.com/williamscherechi/fuelsgate",
     featured: true,
   },
   {
-    title: "Chrome Extension with AI",
+    title: "ProDevs AI Job Application Assistant",
     description:
-      "Developed Chrome extension using OpenAI API that increased platform user base by 100%. Integrated with various APIs for enhanced functionality.",
+      "Developed Chrome extension using OpenAI API that helps users apply to jobs faster and easier.",
     image: "/api/placeholder/600/400",
     technologies: [
       "Chrome Extension",
       "OpenAI API",
+      "Web3",
       "JavaScript",
       "React",
       "Web APIs",
     ],
-    liveUrl: "https://chrome.google.com/webstore",
-    githubUrl: "https://github.com/williamscherechi/chrome-extension",
+    liveUrl:
+      "https://chromewebstore.google.com/detail/prodevs-ai-job-applicatio/kbgnpjebpekcckmcfoijnngogjolfgag",
     featured: false,
   },
   {
-    title: "Shortpoint SPX",
-    description:
-      "Enhanced code organization and performance in monorepo with component-based architecture. Optimized state management using Redux, resulting in 20% increase in positive feedback.",
+    title: "CosmoRemit",
+    description: "This app facilitates seamless money transfers across borders",
     image: "/api/placeholder/600/400",
-    technologies: ["React", "Redux", "TypeScript", "Monorepo", "Atomic Design"],
-    liveUrl: "https://shortpoint.com",
-    githubUrl: "https://github.com/williamscherechi/shortpoint",
-    featured: false,
+    technologies: ["React", "Redux", "TypeScript", "Laravel", "Atomic Design"],
+    liveUrl: "https://cosmoremit.com.au/",
+    featured: true,
   },
   {
     title: "Governance & Staking Dashboard",
     description:
-      "Led development of comprehensive governance and staking dashboard with seamless user experience and robust functionality. Awarded employee of the month trice.",
+      "Led development of comprehensive governance and staking dashboard with seamless user experience and robust functionality.",
     image: "/api/placeholder/600/400",
     technologies: [
       "Next.js",
@@ -79,18 +77,33 @@ const projects = [
       "Solidity",
       "PostgreSQL",
     ],
-    liveUrl: "https://governance.tokenmetrics.com",
-    githubUrl: "https://github.com/williamscherechi/governance-dashboard",
+    liveUrl: "https://tmai.tokenmetrics.com",
+    featured: false,
+  },
+  {
+    title: "Thatapp",
+    description:
+      "Transform your Podio experience with ThatApp: seamless email integration, custom templates, and powerful analytics for ultimate efficiency.",
+    image: "/api/placeholder/600/400",
+    technologies: [
+      "PHP",
+      "Laravel",
+      "React",
+      "Podio",
+      "MySQL",
+      "MongoDB",
+      "PostgreSQL",
+    ],
+    liveUrl: "https://www.thatapp.io/",
     featured: true,
   },
   {
-    title: "Cooperative Platform",
+    title: "Mentra",
     description:
-      "Increased user engagement by 15% through contributions to cooperative platform using PHP/Laravel. Integrated third-party APIs including Paystack, Okra, and Mono.",
+      "AI powered Wellness application with licensed human therapists.",
     image: "/api/placeholder/600/400",
-    technologies: ["PHP", "Laravel", "React", "Paystack", "Mono", "Okra"],
-    liveUrl: "https://cooperative-platform.com",
-    githubUrl: "https://github.com/williamscherechi/cooperative-platform",
+    technologies: ["PHP", "Laravel", "React", "Next.js", "MySQL"],
+    liveUrl: "https://yourmentra.com/",
     featured: false,
   },
 ];
@@ -166,17 +179,6 @@ export default function Projects() {
                       >
                         <ExternalLink className="h-5 w-5" />
                       </motion.a>
-                      <motion.a
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-3 bg-white text-black rounded-full hover:bg-primary hover:text-white transition-colors"
-                        aria-label="View source code"
-                      >
-                        <Github className="h-5 w-5" />
-                      </motion.a>
                     </div>
                   </div>
                   <div className="p-6">
@@ -207,17 +209,6 @@ export default function Projects() {
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo
-                      </motion.a>
-                      <motion.a
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <Github className="h-4 w-4 mr-2" />
-                        Source Code
                       </motion.a>
                     </div>
                   </div>
@@ -286,16 +277,6 @@ export default function Projects() {
                           aria-label="View live demo"
                         >
                           <ExternalLink className="h-4 w-4" />
-                        </motion.a>
-                        <motion.a
-                          whileHover={{ scale: 1.1 }}
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                          aria-label="View source code"
-                        >
-                          <Github className="h-4 w-4" />
                         </motion.a>
                       </div>
                       <motion.div
