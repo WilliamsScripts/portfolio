@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
-    title: "Token Metrics Analytics Platform",
+    title: "Token Metrics",
     description:
-      "Rebuilt entire research blog platform from WordPress to Next.js and Supabase, enhancing performance, scalability, and developer experience. Built AI chatbot leveraging OpenAI SDK.",
-    image: "/api/placeholder/600/400",
+      "Rebuilt entire research blog platform from WordPress to Next.js and Supabase, enhancing performance, scalability, and developer experience. Built AI chatbot leveraging OpenAI SDK. Led development of comprehensive governance and staking dashboard with seamless user experience and robust functionality.",
+    image: "/projects/tokenmetrics.png",
     technologies: [
       "Next.js",
       "Supabase",
@@ -19,14 +20,14 @@ const projects = [
       "React",
       "TypeScript",
     ],
-    liveUrl: "https://app.tokenmetrics.com",
+    liveUrl: "https://www.tokenmetrics.com",
     featured: true,
   },
   {
     title: "Fuelsgate Platform",
     description:
       "Designed and implemented entire software architecture for bulk fuel procurement application.",
-    image: "/api/placeholder/600/400",
+    image: "/projects/fuelsgate.png",
     technologies: [
       "React",
       "Node.js",
@@ -40,10 +41,10 @@ const projects = [
     featured: true,
   },
   {
-    title: "ProDevs AI Job Application Assistant",
+    title: "ProDevs",
     description:
       "Developed Chrome extension using OpenAI API that helps users apply to jobs faster and easier.",
-    image: "/api/placeholder/600/400",
+    image: "/projects/prodevs.png",
     technologies: [
       "Chrome Extension",
       "OpenAI API",
@@ -59,32 +60,16 @@ const projects = [
   {
     title: "CosmoRemit",
     description: "This app facilitates seamless money transfers across borders",
-    image: "/api/placeholder/600/400",
+    image: "/projects/cosmoremit.png",
     technologies: ["React", "Redux", "TypeScript", "Laravel", "Atomic Design"],
     liveUrl: "https://cosmoremit.com.au/",
     featured: true,
   },
   {
-    title: "Governance & Staking Dashboard",
-    description:
-      "Led development of comprehensive governance and staking dashboard with seamless user experience and robust functionality.",
-    image: "/api/placeholder/600/400",
-    technologies: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Web3",
-      "Solidity",
-      "PostgreSQL",
-    ],
-    liveUrl: "https://tmai.tokenmetrics.com",
-    featured: false,
-  },
-  {
     title: "Thatapp",
     description:
       "Transform your Podio experience with ThatApp: seamless email integration, custom templates, and powerful analytics for ultimate efficiency.",
-    image: "/api/placeholder/600/400",
+    image: "/projects/thatapp.png",
     technologies: [
       "PHP",
       "Laravel",
@@ -101,9 +86,18 @@ const projects = [
     title: "Mentra",
     description:
       "AI powered Wellness application with licensed human therapists.",
-    image: "/api/placeholder/600/400",
+    image: "/projects/mentra.png",
     technologies: ["PHP", "Laravel", "React", "Next.js", "MySQL"],
     liveUrl: "https://yourmentra.com/",
+    featured: false,
+  },
+  {
+    title: "Usedora",
+    description:
+      "AI powered platform connecting users with curated services and tools.",
+    image: "/projects/dora.png",
+    technologies: ["PHP", "Laravel", "React", "Next.js", "Postgres"],
+    liveUrl: "https://usedora.com/",
     featured: false,
   },
 ];
@@ -161,12 +155,23 @@ export default function Projects() {
                   whileHover={{ y: -5 }}
                   className="group card-modern overflow-hidden hover:shadow-glow transition-all duration-300"
                 >
-                  <div className="relative overflow-hidden">
-                    <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                      <div className="text-6xl font-bold text-primary/30">
-                        WCW
+                  {/* ✅ Fixed image container */}
+                  <div className="relative overflow-hidden w-full">
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={600}
+                        height={338}
+                        className="w-full h-auto object-cover"
+                      />
+                    ) : (
+                      <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                        <div className="text-6xl font-bold text-primary/30">
+                          {project.title ? project.title[0] : "?"}
+                        </div>
                       </div>
-                    </div>
+                    )}
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                       <motion.a
                         whileHover={{ scale: 1.1 }}
@@ -181,13 +186,11 @@ export default function Projects() {
                       </motion.a>
                     </div>
                   </div>
+
                   <div className="p-6">
-                    <h3 className="text-2xl font-bold text-foreground mb-3">
+                    <h3 className="text-2xl font-bold text-foreground mb-4">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
-                      {project.description}
-                    </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech) => (
                         <span
@@ -240,17 +243,31 @@ export default function Projects() {
                     whileHover={{ y: -3 }}
                     className="group card-modern p-6 hover:shadow-glow transition-all duration-300"
                   >
-                    <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg mb-4 flex items-center justify-center">
-                      <div className="text-4xl font-bold text-primary/30">
-                        WCW
-                      </div>
+                    {/* ✅ Fixed image for non-featured cards */}
+                    <div className="relative overflow-hidden rounded-lg mb-4 w-full">
+                      {project.image ? (
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          width={400}
+                          height={225}
+                          className="w-full h-auto object-cover rounded-lg"
+                        />
+                      ) : (
+                        <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center">
+                          <div className="text-4xl font-bold text-primary/30">
+                            {project.title ? project.title[0] : "?"}
+                          </div>
+                        </div>
+                      )}
                     </div>
+
                     <h4 className="text-xl font-semibold text-foreground mb-2">
                       {project.title}
                     </h4>
-                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                    {/* <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                       {project.description}
-                    </p>
+                    </p> */}
                     <div className="flex flex-wrap gap-1 mb-4">
                       {project.technologies.slice(0, 3).map((tech) => (
                         <span
