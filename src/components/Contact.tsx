@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
 
 const contactInfo = [
   {
@@ -37,6 +37,12 @@ const socialLinks = [
     icon: Linkedin,
     name: "LinkedIn",
     href: "https://linkedin.com/in/williams-williams",
+    color: "hover:text-blue-600",
+  },
+  {
+    name: "X",
+    href: "https://x.com/billionaire_dev",
+    icon: Twitter,
     color: "hover:text-blue-600",
   },
 ];

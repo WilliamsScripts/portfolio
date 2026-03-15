@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Heart, Github, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Heart, Github, Linkedin, Mail, ArrowUp, Twitter } from "lucide-react";
 
 const socialLinks = [
   {
@@ -13,6 +13,11 @@ const socialLinks = [
     name: "LinkedIn",
     href: "https://linkedin.com/in/williams-williams",
     icon: Linkedin,
+  },
+  {
+    name: "X",
+    href: "https://x.com/billionaire_dev",
+    icon: Twitter,
   },
   { name: "Email", href: "mailto:willemzy2002@gmail.com", icon: Mail },
 ];

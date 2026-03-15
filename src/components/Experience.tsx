@@ -108,8 +108,25 @@ const experiences = [
     ],
   },
   {
+    title: "Frontend Software Engineer",
+    company: "CosmoRemit",
+    location: "Australia (Remote)",
+    period: "May 2022 - April 2023",
+    type: "Full-time",
+    description:
+      "Optimized front-end rendering performance and implemented SEO best practices while establishing code reviews and testing best practices.",
+    achievements: [
+      "Collaborated frontend development of a cross-border remittance platform using React and Redux.",
+      "Built Pay-in / Pay-out flows and integrated providers like Thunes and Monoova.",
+      "Developed an admin dashboard for transactions, users, rates, and KYC/AML.",
+      "Optimized performance for high-volume transactions with memoization and lazy loading.",
+      "Worked closely with backend, DevOps, and compliance teams ",
+    ],
+    technologies: ["React", "Laravel", "Redux", "Postgres", "Figma", "SEO"],
+  },
+  {
     title: "Fullstack Software Engineer",
-    company: "Simpoo Codes",
+    company: "SimpooBusiness",
     location: "Nigeria (Remote)",
     period: "September 2021 - April 2023",
     type: "Full-time",
@@ -122,15 +139,7 @@ const experiences = [
       "Translated Figma mockups into responsive, mobile-friendly web pages",
       "Ensured minimum REST API response time through caching and query optimization",
     ],
-    technologies: [
-      "React",
-      "Vue.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Figma",
-      "SEO",
-    ],
+    technologies: ["React", "PHP", "Laravel", "Postgres", "Figma", "SEO"],
   },
   {
     title: "Fullstack Software Engineer",
