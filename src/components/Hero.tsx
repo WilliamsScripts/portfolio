@@ -5,7 +5,6 @@ const facts = [
   ["Based in", "Port Harcourt, Nigeria"],
   ["Teams in", "US, Australia, Nigeria (remote)"],
   ["Core stack", "TypeScript, React/Next.js, Node.js, Python/FastAPI, PostgreSQL"],
-  ["Right now", "Capera (fintech), WORKOPTi (human-in-the-loop AI)"],
 ];
 
 export default function Hero() {
