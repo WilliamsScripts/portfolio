@@ -1,25 +1,27 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
+import Backdrop from "@/components/ui/Backdrop";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="relative isolate overflow-x-clip">
+      <Backdrop />
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
-        <About />
         <Skills />
-        <Projects />
         <Experience />
+        <Projects />
         <Contact />
       </main>
       <Footer />
+      <FloatingContact />
     </div>
   );
 }
